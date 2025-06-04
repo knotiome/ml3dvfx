@@ -1,0 +1,23 @@
+
+OPTION 1: Prediction from sketch
+
+- Draw on grid
+
+- Uncomment last two lines of node named "Serialize"
+
+- Click on "Cd to Texture" shelf tool
+
+- Click on "Predict" button on "predict_fashion" HDA
+
+- See prediction in Python Shell
+
+-------------------------------------------------------
+
+
+OPTION 2: Prediction from image
+
+- Define "Image Path" on "predict_fasion" HDA
+
+- Click on "Predict" button on "predict_fashion" HDA
+
+- See prediction in Python Shell

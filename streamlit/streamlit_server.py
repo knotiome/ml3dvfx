@@ -54,5 +54,13 @@ else:
 
 load_clf = pickle.load(open('iris_clf.pkl', 'rb'))
 prediction = load_clf.predict(df)
+prediction_prob = load_clf.predict_proba(df)
 
+st.subheader('Prediction')
+iris_species = np.array(['Iris-setosa', 'Iris-versicolor', 'Iris-virginica'])
+st.write(iris_species[prediction])
 
+st.subheader('Prediction Probability')
+st.write(prediction_prob)
+
+# --

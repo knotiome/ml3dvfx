@@ -36,7 +36,6 @@ else:
         
 iris_raw = pd.read_csv('iris.csv')
 iris = iris_raw.drop(['Species', 'Id'])
-df
 
 
 

@@ -1,0 +1,16 @@
+{
+    "Books": {
+        "3809045902530": {
+            "title": "The Art and Science of Digital Compositing",
+            "author": "Ron Brinkmann",
+            "genre": "computer graphics",
+            "value": 89.99
+        },
+        "5200487353056": {
+            "title": "Of Mice and Magic: A History of American Animated Cartoons",
+            "author": "Leonard Maltin",
+            "genre": "nonfiction",
+            "value": 39.99
+        }
+    }
+}

@@ -4,7 +4,7 @@ import torch
 from torchvision import transforms
 from transformers import AutoModelForImageSegmentation
 
-input_image_path = r"./bg_removal/Person1.png"
+input_image_path = r"./bg_removal/Bongo.JPG"
 
 model = AutoModelForImageSegmentation.from_pretrained('briaai/RMBG-2.0', trust_remote_code=True)
 torch.set_float32_matmul_precision(['high', 'highest'][0])
@@ -29,4 +29,4 @@ pred = preds[0].squeeze()
 pred_pil = transforms.ToPILImage()(pred)
 mask = pred_pil.resize(image.size)
 image.putalpha(mask)
-image.save("no_bg_image.png")
+image.save("Bongo_no_bg.png")

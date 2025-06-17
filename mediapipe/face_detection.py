@@ -40,7 +40,7 @@ def main():
     detector = FaceDetector()
 
     while cap.isOpened():
-        ret, img = cap.read()
+        ret, img = cap.read() 
 
         if ret:
             img, bbox = detector.findFaces(img)

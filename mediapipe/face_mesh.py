@@ -28,6 +28,7 @@ while cap.isOpened():
 
         if detections.multi_face_landmarks:
             for face_landmark in detections.multi_face_landmarks:
+                print(face_landmark)
                 mpDraw.draw_landmarks(img, face_landmark, mpFaceMesh.FACEMESH_CONTOURS, drawSpec1, drawSpec2)
 
         cv2.imshow("Face Mesh", img)

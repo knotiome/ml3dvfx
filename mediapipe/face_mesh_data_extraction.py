@@ -34,6 +34,7 @@ while cap.isOpened():
             frame_landmarks = []
 
             for landmark in face_landmark.landmark:
+                print(face_landmark)
                 frame_landmarks.append({
                     "x": landmark.x,
                     "y": landmark.y,

@@ -52,4 +52,17 @@ if __name__ == "__main__":
     model = create_rnn_model(sequence_length, num_bones, features_per_bone, num_future_frames=num_future_frames)
     model.summary()
 
-    
+    early_stopping = tf.keras.callbacks.EarlyStopping(patience=10, restore_best_weights=True)
+    lr_scheduler = tf.keras.callbacks.ReduceLROnPlateau(factor=0.5, patience=0.5)
+
+    history = model.fit(
+        X, y,
+        epochs=100,
+        batch_size=32,
+        validation_split=0.2,
+        #callbacks=[early_stopping, lr_scheduler]
+    )
+
+    model.save("rnn_animation_predictor.h5")
+    print("Model saved!!")
+

@@ -6,7 +6,7 @@ mp_draw = mp.solutions.drawing_utils
 mp_styles = mp.solutions.drawing_styles
 mp_pose = mp.solutions.pose
 
-source = "dancer.mp4"
+source = "jumping_jacks.mp4"
 
 cap = cv2.VideoCapture(source)
 

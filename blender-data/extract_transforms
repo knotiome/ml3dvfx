@@ -1,0 +1,21 @@
+import bpy
+import json
+import os
+
+output_file = r"C:\Users\phile\development\ml3dvfx\blender-data\animation_data.json"
+
+armature = bpy.context.object
+if armature.type != 'ARMATURE':
+    raise Exception('Selected object is not an armature')
+    
+
+scene = bpy.context.scene
+frame_start = scene.frame_start
+frame_end = scene.frame_end
+
+
+
+
+
+
+

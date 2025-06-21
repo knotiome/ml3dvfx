@@ -5,8 +5,8 @@ from prepare_data import NYUDepthDataset, NYUDepthTransform
 from torch.utils.data import DataLoader
 
 #csv
-train_csv_path = "nyu2_train.csv"
-test_csv_path = "nyu2_test.csv"
+test_csv_path = "/home/phile/development/ml3dvfx/depth_estimation/nyu2_test.csv"
+train_csv_path = "/home/phile/development/ml3dvfx/depth_estimation/nyu2_train.csv"
 
 
 # training - dataset and dataloader

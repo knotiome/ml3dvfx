@@ -175,5 +175,4 @@ cython_debug/
 
 
 # LARGE DATA FOLDER TO IGNORE
-/nyu_data/data/nyu2_train/
-/nyu_data/data/nyu2_test/
+/nyu_data/

@@ -175,4 +175,4 @@ cython_debug/
 
 
 # LARGE DATA FOLDER TO IGNORE
-/nyu_data/
+/depth_estimation/data/

@@ -16,7 +16,7 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
-source = "/home/phile/development/ml3dvfx/depth_estimation/hub/cat.mp4"
+source = r"C:\Users\phile\development\ml3dvfx\depth_estimation\hub\cat.mp4"
 cap = cv2.VideoCapture(source)
 
 if not cap.isOpened():

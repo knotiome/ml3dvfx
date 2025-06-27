@@ -1,0 +1,16 @@
+{
+  "os": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "CPython 3.10.18",
+  "startedAt": "2025-06-27T20:49:17.841294Z",
+  "program": "/home/phile/development/ml3dvfx/ppo/biped.py",
+  "codePath": "ppo/biped.py",
+  "git": {
+    "remote": "https://github.com/knotiome/ml3dvfx.git",
+    "commit": "cb8f24971766c431d3192837a00a1eeef53d8595"
+  },
+  "email": "philetmannion@gmail.com",
+  "root": "/home/phile/development/ml3dvfx/ppo",
+  "host": "M87",
+  "executable": "/home/phile/miniconda3/envs/gym/bin/python",
+  "codePathLocal": "biped.py"
+}

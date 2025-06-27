@@ -1,7 +1,6 @@
+from numpy._core.multiarray import dtype
 import gym
 import numpy as np
-np.float_ = np.float32
-np.bool8 = np.bool
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -35,9 +34,7 @@ epsilon_min = 0.01
 learning_rate = .001
 
 input_dim = env.observation_space.shape[0]
-print(env.observation_space.shape[0])
 output_dim = env.action_space.n
-print(env.action_space.n)
 dqn = DQN(input_dim, output_dim)
 optimizer = optim.Adam(dqn.parameters(), lr=learning_rate)
 loss_fn = nn.MSELoss()
@@ -59,7 +56,6 @@ for episode in range(1, episodes):
 
     for t in range(1, 501):
         action = select_action(state, epsilon)
-        env.step(action)
         next_state, reward, done, _, _ = env.step(action)
         replay_buffer.append((state, action, reward, next_state, done))
 
@@ -74,9 +70,9 @@ for episode in range(1, episodes):
         states, actions, rewards, next_states, dones = zip(*batch)
 
         states = torch.tensor(states, dtype=torch.float32)
-        actions = torch.tensor(actions, dtype=torch.int64).unsqueeze
+        actions = torch.tensor(actions, dtype=torch.int64).unsqueeze(1)
         rewards = torch.tensor(rewards, dtype=torch.float32)
-        next_states = torch.tensor(dones, dtype=torch.float32)
+        next_states = torch.tensor(next_states, dtype=torch.float32)
         dones = torch.tensor(dones, dtype=torch.float32)
 
         current_q = dqn(states).gather(1, actions).squeeze()
@@ -87,6 +83,8 @@ for episode in range(1, episodes):
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
+    else:
+        break
 
 
     if epsilon > epsilon_min:
@@ -99,7 +97,7 @@ state = env.reset()
 for _ in range(500):
     env.render()
     action = select_action(state, epsilon=0)
-    state, done, _, _, _ = env.step(action)
+    state, _,done, _ = env.step(action)
     if done:
         break
 

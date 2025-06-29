@@ -1,0 +1,25 @@
+_wandb:
+    value:
+        cli_version: 0.20.1
+        code_path: code/lunar_lander/ppo/train_lunar_lander_ppo.py
+        m: []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 16
+                - 35
+                - 55
+            "4": 3.10.18
+            "5": 0.20.1
+            "12": 0.20.1
+            "13": linux-x86_64
+env_name:
+    value: LunarLander-v3
+policy_type:
+    value: MlpPolicy
+total_timesteps:
+    value: 350000

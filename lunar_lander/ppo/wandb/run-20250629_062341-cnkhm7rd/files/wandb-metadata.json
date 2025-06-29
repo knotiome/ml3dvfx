@@ -1,0 +1,16 @@
+{
+  "os": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "CPython 3.10.18",
+  "startedAt": "2025-06-29T10:23:41.527488Z",
+  "program": "/home/phile/development/ml3dvfx/lunar_lander/ppo/train_lunar_lander_ppo.py",
+  "codePath": "lunar_lander/ppo/train_lunar_lander_ppo.py",
+  "git": {
+    "remote": "https://github.com/knotiome/ml3dvfx.git",
+    "commit": "1099d2b5a71eade52c09b60e088fb77611abf3c7"
+  },
+  "email": "philetmannion@gmail.com",
+  "root": "/home/phile/development/ml3dvfx/lunar_lander",
+  "host": "M87",
+  "executable": "/home/phile/miniconda3/envs/gym/bin/python",
+  "codePathLocal": "ppo/train_lunar_lander_ppo.py"
+}

@@ -172,3 +172,4 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+nlp/llm_assistant/llama-2-7b-chat.gguf

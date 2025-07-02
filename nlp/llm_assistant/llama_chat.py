@@ -23,7 +23,7 @@ def setup_llama(base_dir):
     return model_path
 
 
-def chat_withy_llama(model_path):
+def chat_with_llama(model_path):
     from llama_cpp import Llama
 
     llm = Llama(
@@ -47,7 +47,7 @@ def chat_withy_llama(model_path):
 
         messages.append({"role": "user", "content": user_input})
 
-        response = llm.chat_completion(messages)
+        response = llm.create_chat_completion(messages)
         assistant_message = response["choices"][0]["message"]["content"]
 
         messages.append({"role": "assistant", "content": assistant_message})

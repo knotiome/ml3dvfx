@@ -2,6 +2,7 @@ import os
 import subprocess
 import sys
 from pathlib import Path
+from assistant_utils import create_dcc_assistant
 
 def setup_llama(base_dir):
     base_dir = Path(base_dir).resolve()
@@ -65,7 +66,8 @@ if __name__ == "__main__":
             custom_dir = "."
 
         model_path = setup_llama(custom_dir)
-        chat_with_llama(model_path)
+        create_dcc_assistant(model_path, str(sys.argv[2]))
+        #chat_with_llama(model_path)
 
     except Exception as e:
         print(f"An Error has occurred: {e}")

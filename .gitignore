@@ -173,3 +173,5 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 nlp/llm_assistant/llama-2-7b-chat.gguf
+nlp/llm_examples/dialogue-summary-training-1751449237/checkpoint-1/model.safetensors
+nlp/llm_examples/dialogue-summary-training-1751449237/checkpoint-1/optimizer.pt

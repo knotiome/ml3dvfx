@@ -18,7 +18,7 @@ def setup_llama(base_dir):
 
     if not model_path.exists():
         print(f"Downloading model to: {model_path}")
-        subprocess.check_call(["curl", "-L", model_url, "-o", str(model_path)])
+        subprocess.check_call(["curl", "-k", "-L", model_url, "-o", str(model_path)])
 
     return model_path
 

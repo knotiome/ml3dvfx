@@ -6,10 +6,10 @@ from pydantic import BaseModel
 app = FastAPI()
 
 
-class Shots(BaseModel):
+class Shot(BaseModel):
     number: int
     name: str
-    squence: str
+    sequence: str
     department: Optional[str] = None
 
 shots = {
@@ -37,3 +37,34 @@ def get_shot_by_name(shot_name):
         if shots[shot]["name"] == shot_name:
             return shots[shot]
         
+
+@app.post("/create-shot/(shot_num)")
+def create_shot(shot_num: int, shot: Shot):
+    if shot_num in shots:
+        return {"Error": "Shot already exists"}
+    shots[shot_num] = shot
+    return shots[shot_num]
+
+@app.put("/update-shot/{shot_num}")
+def update_shot(shot_num:int, shot: Shot):
+    if shot_num not in shots:
+        return {"Error": "That shot does not exist"}
+    
+    shots[shot_num] = {"number": shot_num,
+        "name": shot.name,
+        "sequence": shot.sequence,
+        "department": shot.department}
+
+    return shots[shot_num]
+
+@app.delete("/delete-shot/{shot_num}")
+def delete_shot(shot_num: int):
+    if shot_num not in shots:
+        return {"Error": "Shot already exists"}
+    
+    del shots[shot_num]
+    return {"Message" : "Shot deleted"}
+
+
+
+

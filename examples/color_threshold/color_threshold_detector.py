@@ -51,7 +51,7 @@ while cap.isOpened():
     contours = sorted(contours, key=cv2.contourArea, reverse=True)
 
     if contours:
-        for contour in contours[:12]:
+        for contour in contours[:15]: #can increase contour number
             (x_min, y_min, box_width, box_height) = cv2.boundingRect(contour)
             cv2.rectangle(imageBGR, (x_min - 15, y_min - 15),
                          (x_min + box_width + 15, y_min + box_height + 15),
@@ -63,7 +63,7 @@ while cap.isOpened():
 
     cv2.imshow("Original", imageBGR)
 
-    if cv2.waitKey(50) & 0xFF == ord('q'):
+    if cv2.waitKey(75) & 0xFF == ord('q'):  # can slow down
         break
 
 

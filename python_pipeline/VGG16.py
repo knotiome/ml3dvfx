@@ -45,7 +45,8 @@ class VGG16(nn.Module):
             nn.Dropout(),
             nn.Linear(4096, num_classes)
             nn.Softmax(dim=1)
-        )
+            )
+            
 
     def forward(self, x):
         x = self.features(x)
